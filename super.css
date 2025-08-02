@@ -1,0 +1,147 @@
+ html{
+    background-color: rgb(194, 220, 255);
+ }
+
+.adorno{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(240, 195, 50);
+}
+
+h1{
+    display: none;
+}
+
+ .seccion {
+    display: none;
+    }
+            
+.seccion.activa { 
+    display: block;
+    }
+
+.barradnav {
+    background-color: rgb(204, 0, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 16px;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.img,
+.musica {
+    min-width: 0;
+    flex: 0 0 auto;
+}
+
+.botones {
+    display: flex;
+    gap: 70px;
+    min-width: 0;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+.boton {
+    position: relative;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    font: inherit;
+    font-size: 35px;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.boton:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.textosDer{
+    background-color: rgb(10, 77, 130);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+    margin-left: 500px;
+    margin-right: 100px;
+    box-sizing: border-box;
+}
+
+.textosIzq{
+    background-color: rgb(10, 77, 130);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+    margin-left: 100px;
+    margin-right: 500px;
+    box-sizing: border-box;
+}
+
+
+
+.inspiracion{
+    background-color: rgb(10, 77, 130);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 400px;
+
+}
+
+@media (max-width: 700px) {
+    .barradnav {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+    }
+    .img {
+        margin-bottom: 8px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .botones {
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+    }
+    .musica {
+        width: 100%;
+        display: flex;;
+        justify-content: center;
+    }
+
+   .textosDer {
+        max-width: 98vw;
+        width: 98vw;
+        font-size: 16px;
+        margin: 12px auto;
+    }
+
+    .textosIzq {
+        max-width: 98vw;
+        width: 98vw;
+        font-size: 16px;
+        margin: 12px auto;
+    }
+}
