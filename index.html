@@ -19,7 +19,7 @@
                     <button class="boton" onclick="mostrarSeccion('esperanza')">Esperanza</button>
                     </div>
                         <div class="musica">
-                            <audio controls >
+                            <audio id="punkrocker" controls autoplay loop>
                                 <source src="Punckrocker.mp3">
                             </audio>
                         </div>                    
@@ -205,11 +205,11 @@
 
                         document.getElementById(id).classList.add('activa');
                     }
+
+                    window.addEventListener('DOMContentLoaded', () => {
+                        const audio = document.getElementById('punkrocker');
+                        audio.volume = 0.3; 
+                        });
                 </script>
-
-    
-  
-
-
         </body>
         
