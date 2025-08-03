@@ -1,5 +1,6 @@
  html{
     background-color: rgb(194, 220, 255);
+    height: 100%;
  }
 
 .adorno{
@@ -65,8 +66,16 @@ h1{
 
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .inicio-flex {
@@ -129,6 +138,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     background: #0a4d82;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.75);
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
@@ -140,6 +150,7 @@ body {
 
 .textosIzq{
     background-color: rgb(10, 77, 130);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.75);
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -153,14 +164,75 @@ body {
 
 .inspiracion{
     background-color: rgb(10, 77, 130);
+    box-shadow: 0 8px 32px rgba(10, 77, 130, 0.75);
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     font-size: 20px;
     font-style: italic;
     margin-top: 40px;
-
 }
+
+.consejo{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(10, 77, 130);
+    box-shadow: 0 8px 32px rgba(204, 0, 1, 0.75);
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    width: 13%;
+    display: block; 
+    margin-top: 20px; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 45px;
+}
+
+footer {
+    background-color: rgb(204, 0, 1);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px; 
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.redes a img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#fb{
+    width: 40px;
+    height: 40px;
+}
+
+#ig{
+    width: 45px;
+    height: 35px;
+}
+
+#x{
+    width: 30px;
+    height: 30px;
+}
+
+#yt{
+    width: 50px;
+    height: 50px;
+}
+
 
 @media (max-width: 700px) {
     .barradnav {
@@ -201,25 +273,33 @@ body {
     .personaje-flex {
         flex-direction: column;
         align-items: center;
-        gap: 16px;
         padding: 8px 0;
     }
-    .personaje-img,
+
     .personaje-titulo {
+        order: 1;
         max-width: 90vw;
+        margin-bottom: 10px;
     }
 
-   .textosDer {
-        max-width: 98vw;
-        width: 98vw;
-        font-size: 16px;
-        margin: 12px auto;
-    }
-
+   .textosDer,
     .textosIzq {
+        order: 2;
         max-width: 98vw;
         width: 98vw;
         font-size: 16px;
         margin: 12px auto;
+    }
+    .personaje-img {
+        order: 3;
+        max-width: 90vw;
+        margin-bottom: 200px;
+    }
+
+    .consejo {
+        width: 28%;
+        font-size: 16px;
+        margin: 20px auto;
+        margin-bottom: 24px;
     }
 }
